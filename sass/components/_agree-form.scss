@@ -1,0 +1,43 @@
+.agree-form__text {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  display: flex;
+  margin-bottom: 30px;
+  padding-left: 11px;
+
+  &::before {
+    display: block;
+    content: '';
+    width: 16px;
+    height: 15px;
+    border: 2px solid #000;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 8px;
+
+    transition-property: background-color, background-image, border-color,
+      box-shadow;
+    transition-duration: var(--time-animation);
+    transition-timing-function: var(--cubic-bezier);
+
+    .agree-form__checkbox:checked + & {
+      background-color: var(--acent-color);
+      background-image: url(../images/icon-check.svg);
+      background-size: contain;
+      background-origin: border-box;
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+}
+
+.agree-form__link {
+  color: var(--acent-color);
+}
+
+.call-form__btn {
+  margin: 0 auto;
+}
+
+// .agree-form-checkbox:focus + .agree-form-text::before {
+//   outline: 1px solid #000;}

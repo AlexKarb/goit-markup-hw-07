@@ -1,0 +1,28 @@
+.close-button {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.close-button__icon {
+  width: 18px;
+  height: 18px;
+  fill: #000;
+  transition: fill var(--time-animation) var(--cubic-bezier);
+
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+  .close-button:focus &,
+  .close-button:hover & {
+    fill: var(--acent-color);
+  }
+}
