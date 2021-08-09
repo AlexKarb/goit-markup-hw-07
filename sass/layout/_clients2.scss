@@ -1,0 +1,30 @@
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.clients__item:not(:nth-child(6n)) {
+  margin-right: 30px;
+}
+
+.clients__link {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  padding: 16px 32px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #afb1b8;
+  transition-property: fill, border-color;
+  transition-duration: var(--time-animation);
+  transition-timing-function: var(--cubic-bezier);
+
+  &:hover,
+  &:focus {
+    fill: var(--acent-color);
+    border-color: var(--acent-color);
+  }
+}

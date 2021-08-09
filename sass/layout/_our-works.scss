@@ -1,24 +1,35 @@
-.our-works__list {
-  display: flex;
-  justify-content: center;
-}
-.our-works__item {
-  position: relative;
+.our-works {
+  display: none;
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  &__conteiner {
+    margin-top: 94px;
   }
 }
 
-.our-works__subtitle {
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  padding-top: 27px;
-  padding-bottom: 27px;
+@include screen('desktop') {
+  .our-works {
+    display: block;
 
-  text-align: center;
-  color: #ffffff;
-  background: rgba(47, 48, 58, 0.8);
+    &__list {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    &__item {
+      position: relative;
+    }
+
+    &__subtitle {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+
+      color: var(--body-color-main);
+      padding-top: 27px;
+      padding-bottom: 27px;
+      text-align: center;
+      background-color: rgba(47, 48, 58, 0.8);
+    }
+  }
 }

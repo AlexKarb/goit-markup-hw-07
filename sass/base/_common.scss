@@ -18,7 +18,7 @@ ol {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -37,12 +37,4 @@ body {
   letter-spacing: 0.03em;
   color: var(--main-color);
   background-color: #fff;
-}
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-
-  &:nth-child(2n) {
-    background: #f5f4fa;
-  }
 }
