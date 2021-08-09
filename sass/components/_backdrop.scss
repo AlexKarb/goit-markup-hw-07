@@ -10,9 +10,8 @@
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: scale(1);
 
-  transition-property: opacity, visibility, transform;
+  transition-property: opacity, visibility;
   @include animation;
 }
 
@@ -20,7 +19,6 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: scale(0);
 }
 
 .backdrop.is-hidden .modal-window {

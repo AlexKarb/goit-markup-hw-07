@@ -6,7 +6,7 @@
   --body-color-main: #fff;
   --body-color-acent: #f5f4fa;
   --footer-body-color: #2f303a;
-  --time-animation: 250ms;
+  --time-animation: 2500ms;
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -117,12 +117,8 @@ body {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition-property: opacity, visibility, -webkit-transform;
-  transition-property: opacity, visibility, -webkit-transform;
-  transition-property: opacity, visibility, transform;
-  transition-property: opacity, visibility, transform, -webkit-transform;
+  -webkit-transition-property: opacity, visibility;
+  transition-property: opacity, visibility;
   -webkit-transition-duration: var(--time-animation);
           transition-duration: var(--time-animation);
   -webkit-transition-timing-function: var(--cubic-bezier);
@@ -133,8 +129,6 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  -webkit-transform: scale(0);
-          transform: scale(0);
 }
 
 .backdrop.is-hidden .modal-window {
@@ -148,6 +142,8 @@ body {
   left: 50%;
   -webkit-transform: scale(1) translate(-50%, -50%);
           transform: scale(1) translate(-50%, -50%);
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
   width: 280px;
   padding: 40px;
   background: var(--body-color-main);
